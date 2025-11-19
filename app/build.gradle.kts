@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "dev.bro.monitoring_sampah"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "dev.bro.monitoring_sampah"

@@ -6,11 +6,13 @@
     android:background="#f9f9f9">
 
     <LinearLayout
+        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="16dp">
 
+        <!-- HEADER -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -59,11 +61,13 @@
                         android:textSize="25sp"
                         android:textStyle="bold"/>
                 </LinearLayout>
+
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
 
+        <!-- LEVEL SAMPAH -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -79,22 +83,24 @@
 
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:src="@drawable/trash2"
-                        />
+                        android:src="@drawable/trash2"/>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Level Sampah"
+                        android:textColor="#000"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        android:textColor="#000"/>
+                        android:layout_marginStart="8dp"/>
                 </LinearLayout>
-
 
                 <TextView
                     android:layout_height="wrap_content"
@@ -115,8 +121,9 @@
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
-x
 
+
+        <!-- KADAR BAU -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -128,32 +135,95 @@ x
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingTop="16dp"
-                android:paddingStart="5dp"
-                android:paddingBottom="16dp">
+                android:padding="16dp">
+
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
                     <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/bau"
-                        android:layout_gravity="center"/>
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/bau"/>
+
                     <TextView
                         android:layout_height="wrap_content"
                         android:layout_width="match_parent"
                         android:text="Kadar Bau"
                         android:textStyle="bold"
-                        android:textSize="18sp"/>
+                        android:textSize="18sp"
+                        android:layout_marginStart="8dp"/>
                 </LinearLayout>
 
+                <!-- INDICATOR BAR -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="16dp"
+                    android:weightSum="3">
 
-                <!-- Tambah indikator warna -->
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#8EE58C"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#CFCFCF"
+                        android:layout_marginStart="8dp"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#CFCFCF"
+                        android:layout_marginStart="8dp"/>
+                </LinearLayout>
+
+                <!-- LABEL -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Normal"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Bau"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Sangat Bau"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
+
+        <!-- SUHU & KELEMBAPAN -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -161,6 +231,7 @@ x
             android:weightSum="2"
             android:layout_marginTop="16dp">
 
+            <!-- SUHU -->
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -177,12 +248,23 @@ x
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Suhu"/>
+                        android:layout_height="wrap_content"
+                        android:text="Suhu"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/txtTemp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="—°C"
+                        android:textSize="22sp"
+                        android:layout_marginTop="8dp"/>
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
+            <!-- KELEMBAPAN -->
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -197,10 +279,24 @@ x
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <TextView android:text="Kelembapan" android:textStyle="bold"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kelembapan"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:id="@+id/txtHumidity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="—%"
+                        android:textSize="22sp"
+                        android:layout_marginTop="8dp"/>
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
         </LinearLayout>
 
     </LinearLayout>
