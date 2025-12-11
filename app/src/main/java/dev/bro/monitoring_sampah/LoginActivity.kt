@@ -29,6 +29,8 @@ class LoginActivity : AppCompatActivity() {
             if (username == correctUsername && password == correctPassword) {
                 startActivity(Intent(this, MainActivity::class.java))
                 Toast.makeText(this, "Login Berhasil!", Toast.LENGTH_SHORT).show()
+                finish() // ← INI YANG NGILANGIN AUTO LOGOUT
+
             } else {
                 Toast.makeText(this, "Username / Password salah!", Toast.LENGTH_SHORT).show()
             }

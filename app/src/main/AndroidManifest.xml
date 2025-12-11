@@ -12,22 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Monitoringsampah"
         tools:targetApi="31">
-
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
         <!-- LOGIN sebagai halaman pertama -->
         <activity
             android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- Halaman utama setelah login -->
+        </activity> <!-- Halaman utama setelah login -->
         <activity
             android:name=".MainActivity"
             android:exported="true" />
-
     </application>
 
 </manifest>
